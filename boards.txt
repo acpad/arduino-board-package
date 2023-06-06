@@ -1,0 +1,33 @@
+# USB vendor        0x6666
+#
+# Every product reserves 16 USB product IDs, which changes with the
+# number of configured MIDI ports/cables.
+#
+# Hardware:
+#   surface   0xcf70
+
+surface.name=ACPAD surface
+surface.vid.0=0x6666
+surface.pid.0=0xcf70
+surface.build.vid=0x6666
+surface.build.pid=0xcf70
+surface.build.mcu=cortex-m4
+surface.build.f_cpu=120000000L
+surface.build.cache_flags=-DENABLE_CACHE
+surface.build.flags.optimize=-O3
+surface.build.usb_product="ACPAD surface"
+surface.build.usb_manufacturer="ACPAD Instruments GmbH"
+surface.build.usb_power=20
+surface.build.board=ACPAD_SURFACE
+surface.build.core=arduino
+surface.build.extra_flags=-D__SAMD51G19A__ -DACPAD_SURFACE -D__SAMD51__ -DUSE_TINYUSB {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4 -mfloat-abi=hard -mfpu=fpv4-sp-d16
+surface.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+surface.build.variant=surface
+surface.build.variant_system_lib=
+surface.upload.tool=bossac
+surface.upload.protocol=sam-ba
+surface.upload.maximum_size=245760
+surface.upload.offset=0x4000
+surface.upload.use_1200bps_touch=true
+surface.upload.wait_for_upload_port=true
+surface.upload.native_usb=true
