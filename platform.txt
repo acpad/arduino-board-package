@@ -1,5 +1,5 @@
 name=acpad
-version=35
+version=36
 
 # Compile variables
 # -----------------
